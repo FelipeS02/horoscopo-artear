@@ -1,0 +1,25 @@
+.order-selector__trigger {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--spacing-1);
+  cursor: pointer;
+  transition-property: color, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  & > span {
+    font-family: 'Josefin Sans' !important;
+  }
+
+  & > svg {
+    color: #cccccc;
+  }
+
+  &:hover > svg {
+    color: hsl(var(--brand-600));
+  }
+}
+
+.order-selector__viewport {
+  
+}

@@ -1,0 +1,24 @@
+.header__container {
+  padding-block: var(--spacing-14);
+}
+
+.header__logo {
+  font-size: clamp(3rem, 6vw, 10rem);
+  letter-spacing: -0.05em;
+  display: block;
+  text-align: center;
+  user-select: none;
+  color: transparent;
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--brand-400)),
+    var(--text-primary)
+  );
+  background-clip: text;
+}
+
+@media screen and (max-width: 768px) {
+  .header__container{
+    padding-block: var(--spacing-8);
+  }
+}

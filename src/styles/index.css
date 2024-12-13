@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('./variables.css');
+
+.section-content {
+  max-width: 1500px;
+  padding-inline: var(--spacing-6);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  background: var(--background);
+  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-smooth: antialiased;
+  min-height: 100vh;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.filter-container {
+  height: 2rem;
+  background-color: hsl(var(--brand-100));
+  border: 1px solid hsl(var(--brand-50) / 50%);
+  border-radius: var(--rounded-md);
+  transition-property: initial, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.filter-container[aria-disabled='true'] {
+  opacity: 0.5 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+p,
+span {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+}
+
+/* CSS Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

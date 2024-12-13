@@ -1,0 +1,40 @@
+.signs-list__container,
+.signs-list__not-found {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signs-list__container {
+  position: relative;
+  animation: appear 300ms ease-out;
+}
+
+.signs-list__not-found {
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.signs-list__wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-auto-flow: row;
+  gap: var(--spacing-4);
+}
+
+.signs-list__wrapper[data-view='grid'] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.signs-list__wrapper[data-view='list'] {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .signs-list__wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}

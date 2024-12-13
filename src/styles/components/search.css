@@ -1,0 +1,22 @@
+.search__container {
+  display: flex;
+  align-items: center;
+  color: hsl(var(--brand-950));
+  gap: var(--spacing-2);
+  padding: var(--spacing-1_5) var(--spacing-2);
+  padding-inline-end: var(--spacing-7);
+  height: 2.5rem !important;
+  border-radius: 10000px !important;
+  width: 100%;
+}
+
+.search__input {
+  all: unset;
+  border-bottom: 2px solid hsl(var(--brand-300));
+  height: 100%;
+  width: 100%;
+  transition: border 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:focus-visible {
+    border-color: hsl(var(--brand-600));
+  }
+}

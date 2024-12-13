@@ -1,0 +1,52 @@
+:root {
+  --brand-50: 262 67% 98%;
+  --brand-100: 258 57% 95%;
+  --brand-200: 255 57% 92%;
+  --brand-300: 256 58% 85%;
+  --brand-400: 260 55% 76%;
+  --brand-500: 262 55% 66%;
+  --brand-600: 266 51% 60%;
+  --brand-700: 267 42% 50%;
+  --brand-800: 267 42% 42%;
+  --brand-900: 268 42% 35%;
+  --brand-950: 265 44% 23%;
+
+  --spacing-0: 0rem; /* 0 */
+  --spacing-0_5: 0.125rem; /* 2px */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-1_5: 0.375rem; /* 6px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-2_5: 0.625rem; /* 10px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-3_5: 0.875rem; /* 14px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-7: 1.75rem; /* 28px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-9: 2.25rem; /* 36px */
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-11: 2.75rem; /* 44px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-14: 3.5rem; /* 56px */
+  --spacing-16: 4rem; /* 64px */
+  --spacing-18: 4.5rem; /* 72px */
+  --spacing-20: 5rem; /* 80px */
+  --spacing-24: 6rem; /* 96px */
+
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-md: 0.375rem;
+  --rounded-lg: 0.5rem;
+
+  --text-primary: hsl(var(--brand-50));
+  --text-secondary: rhsl(var(--brand-50) / 70%);
+
+  --accent-color: hsl(var(--brand-50) / 50%);
+
+  --background: radial-gradient(
+    ellipse at bottom,
+    hsl(var(--brand-900)) 0%,
+    #090a0f 100%
+  );
+}

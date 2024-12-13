@@ -1,0 +1,32 @@
+.list-filters__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-5);
+}
+
+.list-filters__options {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.list-filters__inner {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  grid-template: 1fr / minmax(300px, 20%) minmax(300px, 25%);
+
+  & > * {
+    grid-column: span 1 / span 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list-filters__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+}
