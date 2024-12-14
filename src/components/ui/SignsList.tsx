@@ -2,8 +2,8 @@ import { FC, memo } from 'react';
 import { ZodiacSign } from '@/models/zodiacSign';
 import SignsCard from './SignsCard';
 import ListBottomBlur from '../ui/ListBottomBlur';
-import '@/styles/components/signs-list.css';
 import { SearchX } from 'lucide-react';
+import '@/styles/components/signs-list.css';
 
 export interface SignsListProps {
   signs: ZodiacSign[];
