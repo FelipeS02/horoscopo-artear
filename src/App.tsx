@@ -25,33 +25,27 @@ function App() {
       {!loading ? (
         <main className='home__container'>
           {!filtered ? (
-            <>
-              <SignsSection id='today-horoscope' aria-label='Today horoscope'>
-                <SignsSectionContent>
-                  <SignsSectionTitle>Horóscopo del dia</SignsSectionTitle>
-                  <SignsCard
-                    {...todaySign}
-                    size='lg'
-                    variant='primary'
-                    view='list'
-                  />
-                </SignsSectionContent>
-              </SignsSection>
-              <SignsSection id='all-signs' aria-label='All the signs'>
-                <SignsSectionContent>
-                  <SignsSectionTitle>Todos los signos</SignsSectionTitle>
-                  <SignsList signs={filteredSigns} view={view} key={view} />
-                </SignsSectionContent>
-              </SignsSection>
-            </>
-          ) : (
-            <SignsSection>
+            <SignsSection id='today-horoscope' aria-label='Today horoscope'>
               <SignsSectionContent>
-                <SignsSectionTitle>Resultado de la busqueda</SignsSectionTitle>
-                <SignsList signs={filteredSigns} view={view} key={view} />
+                <SignsSectionTitle>Horóscopo del dia</SignsSectionTitle>
+                <SignsCard
+                  {...todaySign}
+                  size='lg'
+                  variant='primary'
+                  view='list'
+                />
               </SignsSectionContent>
             </SignsSection>
-          )}
+          ) : null}
+
+          <SignsSection id='all-signs' aria-label='All the signs'>
+            <SignsSectionContent>
+              <SignsSectionTitle>
+                {!filtered ? 'Todos los signos' : 'Resultado de la busqueda'}
+              </SignsSectionTitle>
+              <SignsList signs={filteredSigns} view={view} key={view} />
+            </SignsSectionContent>
+          </SignsSection>
         </main>
       ) : (
         <Loader />
