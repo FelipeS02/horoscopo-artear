@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { sortList, searchSigns } from '@/store/signsSlice';
 import { useDebounceCallback } from '@/hooks/useDebounceCallback';
@@ -14,7 +14,6 @@ interface ListFiltersProps extends ViewSelectorProps {
 const ListFilters: FC<ListFiltersProps> = ({ view, setView, disabled }) => {
   const dispatch = useAppDispatch();
   const { order: storeOrder } = useAppSelector((state) => state);
-  const [query, setQuery] = useState<string>('');
 
   const debouncedQuery = useDebounceCallback(
     (newQuery: string) => dispatch(searchSigns(newQuery)),
@@ -34,10 +33,8 @@ const ListFilters: FC<ListFiltersProps> = ({ view, setView, disabled }) => {
         </div>
         <Search
           disabled={disabled}
-          value={query}
           onChange={(e) => {
             const newQuery = e.target.value;
-            setQuery(newQuery);
             debouncedQuery(newQuery);
           }}
         />
