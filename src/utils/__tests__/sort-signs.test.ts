@@ -9,7 +9,9 @@ describe('Sort signs', () => {
       field: SortField.alphabetical,
       order: SortOrder.asc,
     };
-    expect(() => sortSigns([], payload)).toThrow('List is not defined');
+
+    // @ts-expect-error Using invalid data to test
+    expect(() => sortSigns(undefined, payload)).toThrow('List is not defined');
   });
 
   it('Throws when payload is invalid', () => {
@@ -30,7 +32,7 @@ describe('Sort signs', () => {
       order: SortOrder.desc,
     });
 
-    expect(byAlphabetical[0]).toHaveProperty("name", "Leo")
+    expect(byAlphabetical[0]).toHaveProperty('name', 'Leo');
 
     expect(byDate[0]).toHaveProperty('name', 'Virgo');
   });

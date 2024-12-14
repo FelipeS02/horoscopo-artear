@@ -14,7 +14,9 @@ const getConditionByField = (
 };
 
 export const sortSigns = (list: ZodiacSign[], payload: SortPayload) => {
-  if (!list || list?.length === 0) throw Error('List is not defined');
+  if (!list) throw Error('List is not defined');
+
+  if (list.length === 0) return list;
 
   // Payload is valid
   SortPayloadSchema.parse(payload);

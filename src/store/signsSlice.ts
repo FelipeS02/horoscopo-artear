@@ -3,7 +3,7 @@ import { ZodiacSign } from '../models/zodiacSign';
 import signsApi from '../api/signs';
 import { SortField, SortOrder, SortPayload } from '@/models/signsSort';
 import { sortSigns } from '@/utils/sortSigns';
-import { signsListSchema, signsSchema } from '@/validators/signs';
+import { signsListSchema } from '@/validators/signs';
 
 const initialSign: ZodiacSign = {
   end_date: '',
