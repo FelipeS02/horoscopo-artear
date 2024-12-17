@@ -56,19 +56,22 @@ const signsSlice = createSlice({
       state.loading = true;
 
       if (!query) {
-        // Re-sort signs to preserve order in filter
-        state.filteredSigns = sortSigns(state.allSigns, state.order);
+        state.filteredSigns = state.allSigns;
 
         state.filtered = false;
+        
       } else {
         const filteredSigns = state.allSigns.filter((sign) =>
           sign.name.toLowerCase().includes(query.toLowerCase())
         );
 
-        state.filteredSigns = sortSigns(filteredSigns, state.order);
+        state.filteredSigns = filteredSigns;
 
         state.filtered = true;
       }
+
+      // Re-sort signs to preserve order in filter
+      state.filteredSigns = sortSigns(state.filteredSigns, state.order);
 
       state.loading = false;
     },
